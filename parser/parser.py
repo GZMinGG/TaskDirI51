@@ -14,6 +14,7 @@ OUTPUT_FOLDER = Path('Output')
 
 
 def main():
+    os.system('mkdir Output')
     os.system('chmod 777 -R Input')
     os.system('chmod 777 -R Output')
     files = set(os.listdir(SOURCE_FOLDER)) - set(os.listdir(OUTPUT_FOLDER))
