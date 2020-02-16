@@ -1,7 +1,7 @@
 ### TaskDirI51
 
 #Step One:
-    install docker, docker-compose and ansible.
+    install git, docker, docker-compose and ansible.
 
 #Step Two:
     git clone https://github.com/GZMinGG/TaskDirI51 and cd TaskDirI51
