@@ -7,7 +7,7 @@
     git clone https://github.com/GZMinGG/TaskDirI51 and cd TaskDirI51
 
 #Step Three:
-    run: ansible-playbook provision.yml
+    run: ansible-playbook provision.yml and whait one minuts.
 
 #Step Four:    
     open smb:\\HostStendIp\shares\Input and upload *.log files
