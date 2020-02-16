@@ -1,0 +1,31 @@
+version: '2'
+services:
+  parser:
+    build: ./parser
+    image: python:3.7-alpine
+    volumes:
+    - ../parser:/work
+
+  samba:
+    build: ./samba
+    image: alpine:latest
+    ports:
+    - "137:137"
+    - "138:138"
+    - "139:139"
+    - "445:445"
+    volumes:
+    - ./samba/:/config
+    - ../parser:/shares   
+    links:
+    - parser
+
+  nginx:
+    image: nginx:alpine
+    ports:
+    - "80:80"
+    volumes:
+    - ./nginx/conf.d:/etc/nginx/conf.d
+    - ../parser/:/var/www/html/
+    links:
+    - parser

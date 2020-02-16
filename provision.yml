@@ -1,0 +1,12 @@
+- name: Run
+  hosts: localhost
+  connection: host
+  gather_facts: no
+  tasks:
+    - docker_service:
+        project_src: compose
+        state: absent
+
+    - docker_service:
+        project_src: compose
+      register: output
